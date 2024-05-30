@@ -21,17 +21,25 @@ public class Application {
         personList.addPerson(person2);
         personList.addPerson(person3);
 
+        for (Person person : personList.getPersonList()) {
+            System.out.println(person);
+        }
+
+        System.out.println("--------------------------------------");
+
         Collections.sort(personList.getPersonList());
 
         for (Person person : personList.getPersonList()) {
             System.out.println(person);
         }
 
+        System.out.println("--------------------------------------");
+
+
         Collections.sort(personList.getPersonList(), new ComparePersonPerBirthYear());
 
         for (Person person : personList.getPersonList()) {
             System.out.println(person);
         }
-
     }
 }
